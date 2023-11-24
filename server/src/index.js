@@ -17,7 +17,12 @@ app.use(morgan('dev'));
 app.use(cors());
 
 // Routes... -----------------------------------------------------------------------------------------------------------------
-// app.use('/', indexRouter);
+app.use('/', routes);
+app.use('*', (req, res) => {
+  res.status(404).json({
+    message: '404 - Not found...'
+  });
+});
 
 app.listen(app.get('port'), () => {
   console.log('Server is running on port: ', app.get('port'));
