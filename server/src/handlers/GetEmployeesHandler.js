@@ -24,9 +24,9 @@ export const getAllEmployeesHandler = async (req, res) => {
 };
 
 export const getEmployeeByIDHandler = async (req, res) => {
-  const { employID } = req.params;
+  const { id } = req.params;
   try {
-    const result = await employeeGET.getAllEmployeeByID(employID);
+    const result = await employeeGET.getAllEmployeeByID(id);
     if (result.length > 0) {
       res.status(200).json({
         message: 'Employee retrieve successfully...!!!',
