@@ -16,6 +16,9 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors());
 
+// Routes... -----------------------------------------------------------------------------------------------------------------
+// app.use('/', indexRouter);
+
 app.listen(app.get('port'), () => {
   console.log('Server is running on port: ', app.get('port'));
   console.log('Connecting with database...');
