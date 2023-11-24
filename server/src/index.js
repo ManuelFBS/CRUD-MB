@@ -4,7 +4,7 @@ import myconn from 'express-myconnection';
 import cors from 'cors';
 import morgan from 'morgan';
 import { dbOptions } from './config/db.js';
-// import indexRouter from './routes/index.route.mjs';
+import { routes } from './routes/index.route.js';
 
 const app = express();
 
