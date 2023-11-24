@@ -1,7 +1,7 @@
 import mysql from 'mysql2';
 import { dbOptions } from './dbConfig.js';
 
-export const executeQuery = () => {
+export const executeQuery = (query) => {
   return new Promise((resolve, reject) => {
     const connection = mysql.createConnection(dbOptions);
 
