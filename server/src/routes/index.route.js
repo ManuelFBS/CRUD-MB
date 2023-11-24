@@ -10,3 +10,5 @@ routes.get(prefix, (rer, res) => {
 });
 
 routes.get(`${prefix}/employees`, getEmpHand.getAllEmployeesHandler);
+
+routes.get(`${prefix}/employees/byid/:id`, getEmpHand.getEmployeeByIDHandler);
