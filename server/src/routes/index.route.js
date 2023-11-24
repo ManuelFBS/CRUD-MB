@@ -14,4 +14,4 @@ routes.get(`${prefix}/employees`, getEmpHand.getAllEmployeesHandler);
 
 routes.get(`${prefix}/employees/byid/:id`, getEmpHand.getEmployeeByIDHandler);
 
-routes.post(`${prefix}/employee/create`, createEmployeeHandler);
+routes.post(`${prefix}/employees/create`, createEmployeeHandler);
