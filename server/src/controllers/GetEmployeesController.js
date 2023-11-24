@@ -11,13 +11,13 @@ export const getAllEmployees = async () => {
   }
 };
 
-// export const getAllEmployeeByID = async (id) => {
-//   try {
-//     const query = 'SELECT * FROM employee WHERE id = ?';
-//     const result = await executeQuery(query);
+export const getAllEmployeeByID = async (employID) => {
+  try {
+    const query = `SELECT * FROM employee WHERE id = ${employID}`;
+    const result = await executeQuery(query);
 
-//     return result;
-//   } catch (error) {
-//     throw error;
-//   }
-// };
+    return result;
+  } catch (error) {
+    throw error;
+  }
+};
