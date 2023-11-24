@@ -17,7 +17,7 @@ export const getAllEmployeesHandler = async (req, res) => {
 
     return result;
   } catch (error) {
-    es.status(500).json({
+    res.status(500).json({
       message: 'Internal Server Error...',
       error: error.message
     });
