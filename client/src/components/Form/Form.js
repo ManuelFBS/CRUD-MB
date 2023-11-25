@@ -41,61 +41,63 @@ export const Form = () => {
 
   return (
     // <form onSubmit={handleSubmit}>
-    <form>
-      <div className='datos'>
-        <label htmlFor='name' className='formLabel'>
-          Nombre:
-          <input
-            // onChange={handleChange}
-            name='name'
-            type='text'
-            id='name'
-            className='inputData'
-          />
-        </label>
-        <label htmlFor='age' className='formLabel'>
-          Edad:
-          <input
-            // onChange={handleChange}
-            name='age'
-            type='number'
-            id='age'
-            className='inputData'
-          />
-        </label>
-        <label htmlFor='country' className='formLabel'>
-          País:
-          <input
-            // onChange={handleChange}
-            name='country'
-            type='text'
-            id='country'
-            className='inputData'
-          />
-        </label>
-        <label htmlFor='position' className='formLabel'>
-          Cargo:
-          <input
-            // onChange={handleChange}
-            name='position'
-            type='text'
-            id='position'
-            className='inputData'
-          />
-        </label>
-        <label htmlFor='years' className='formLabel'>
-          Años:
-          <input
-            // onChange={handleChange}
-            name='years'
-            type='number'
-            id='years'
-            className='inputData'
-          />
-        </label>
-        {/* <button onClick={add}>Guardar</button> */}
-        <button>Guardar</button>
-      </div>
-    </form>
+    <div>
+      <form className='formData'>
+        <div className='datos'>
+          <label htmlFor='name' className='formLabel'>
+            Nombre:
+            <input
+              // onChange={handleChange}
+              name='name'
+              type='text'
+              id='name'
+              className='inputData'
+            />
+          </label>
+          <label htmlFor='age' className='formLabel'>
+            Edad:
+            <input
+              // onChange={handleChange}
+              name='age'
+              type='number'
+              id='age'
+              className='inputData'
+            />
+          </label>
+          <label htmlFor='country' className='formLabel'>
+            País:
+            <input
+              // onChange={handleChange}
+              name='country'
+              type='text'
+              id='country'
+              className='inputData'
+            />
+          </label>
+          <label htmlFor='position' className='formLabel'>
+            Cargo:
+            <input
+              // onChange={handleChange}
+              name='position'
+              type='text'
+              id='position'
+              className='inputData'
+            />
+          </label>
+          <label htmlFor='years' className='formLabel'>
+            Años:
+            <input
+              // onChange={handleChange}
+              name='years'
+              type='number'
+              id='years'
+              className='inputData'
+            />
+          </label>
+          {/* <button onClick={add}>Guardar</button> */}
+          <button>Guardar</button>
+        </div>
+      </form>
+    </div>
   );
 };
