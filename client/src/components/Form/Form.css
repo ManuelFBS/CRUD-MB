@@ -1,9 +1,46 @@
-/* .formData {
-  width: 250px;
-  height: 300px;
-  margin: 0;
-  padding: 0;
+.formData {
+  width: 330px;
+  margin: 20px auto;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
   display: flex;
   align-items: center;
-  justify-content: center;
-} */
+  margin-bottom: 12px;
+}
+
+.formLabel {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  text-align: right;
+  margin-bottom: 8px;
+  width: 70px;
+}
+
+.inputData {
+  width: 280px;
+  height: 15px;
+  padding: 8px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.buttonSave {
+  width: 40%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgb(10, 5, 85);
+  border-radius: 5px;
+  color: ghostwhite;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonSave:hover {
+  background-color: #090453; /* color de fondo al pasar el ratón */
+}
