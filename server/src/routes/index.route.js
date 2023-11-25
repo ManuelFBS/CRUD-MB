@@ -2,7 +2,7 @@ import { Router } from 'express';
 import * as getEmpHand from '../handlers/GetEmployeesHandler.js';
 import { createEmployeeHandler } from '../handlers/PostEmployeeHandler.js';
 import { updateEmployeeHandler } from '../handlers/PutEmployeeHandler.js';
-import { deleteEmployeeHandler } from '../handlers/DehEmployeeHandler.js';
+import { deleteEmployeeHandler } from '../handlers/DelEmployeeHandler.js';
 
 export const routes = Router();
 
