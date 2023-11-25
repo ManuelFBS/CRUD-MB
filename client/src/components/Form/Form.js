@@ -95,7 +95,9 @@ export const Form = () => {
             />
           </label>
           {/* <button onClick={add}>Guardar</button> */}
-          <button>Guardar</button>
+          <button className='buttonSave' type='submit'>
+            Guardar
+          </button>
         </div>
       </form>
     </div>
