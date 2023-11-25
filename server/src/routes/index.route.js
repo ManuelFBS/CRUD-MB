@@ -2,6 +2,7 @@ import { Router } from 'express';
 import * as getEmpHand from '../handlers/GetEmployeesHandler.js';
 import { createEmployeeHandler } from '../handlers/PostEmployeeHandler.js';
 import { updateEmployeeHandler } from '../handlers/PutEmployeeHandler.js';
+import { deleteEmployeeHandler } from '../handlers/DehEmployeeHandler.js';
 
 export const routes = Router();
 
@@ -37,3 +38,5 @@ routes.post(`${prefix}/employees/create`, createEmployeeHandler);
 /* La línea `routes.patch(`/employees/update/:id`, updateEmployeeHandler);` define una ruta
 PATCH para actualizar la información de un empleado. */
 routes.patch(`${prefix}/employees/update/:id`, updateEmployeeHandler);
+
+routes.delete(`${prefix}/employees/del/:id`, deleteEmployeeHandler);
