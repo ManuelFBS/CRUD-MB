@@ -34,7 +34,11 @@ function App() {
       <div id='main-container'>
         <h2 className='titList'>Lista de Empleados</h2>
         <div>
-          <EmployeesList />
+          <EmployeesList
+            employee={employee}
+            setEmployee={setEmployee}
+            employees={employees}
+          />
         </div>
       </div>
     </Fragment>
