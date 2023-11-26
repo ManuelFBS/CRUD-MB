@@ -1,4 +1,5 @@
 import React from 'react';
+import './EmployeesList.css';
 
 export const EmployeesList = () => {
   return (
