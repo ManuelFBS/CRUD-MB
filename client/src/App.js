@@ -15,7 +15,9 @@ function App() {
       </div>
       <div className='list'>
         <h2 className='titList'>Lista de Empleados</h2>
-        <EmployeesList />
+        <div>
+          <EmployeesList />
+        </div>
       </div>
     </Fragment>
   );
