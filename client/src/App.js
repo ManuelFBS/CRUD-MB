@@ -13,7 +13,7 @@ function App() {
       <div>
         <Form />
       </div>
-      <div className='list'>
+      <div id='main-container'>
         <h2 className='titList'>Lista de Empleados</h2>
         <div>
           <EmployeesList />
