@@ -19,10 +19,12 @@
   font-weight: 600;
   text-align: right;
   margin-bottom: 8px;
-  width: 70px;
+  width: 75px;
 }
 
 .inputData {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
   width: 280px;
   height: 15px;
   padding: 8px;
@@ -31,16 +33,19 @@
 }
 
 .buttonSave {
-  width: 40%;
-  margin: 0 auto;
+  width: 45%;
+  margin: auto;
   padding: 10px;
   background-color: rgb(10, 5, 85);
   border-radius: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
   color: ghostwhite;
   border: none;
   cursor: pointer;
 }
 
 .buttonSave:hover {
-  background-color: #090453; /* color de fondo al pasar el ratón */
+  background-color: #312c7f; /* color de fondo al pasar el ratón */
 }
