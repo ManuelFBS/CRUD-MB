@@ -4,7 +4,7 @@ export const EmployeesList = () => {
   return (
     <table className='table'>
       <thead>
-        <tr>
+        <tr className='tr'>
           <th>ID</th>
           <th>Nombre</th>
           <th>Edad</th>
