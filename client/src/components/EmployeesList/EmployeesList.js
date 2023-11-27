@@ -26,6 +26,8 @@ export const EmployeesList = ({ employees }) => {
           <th>País</th>
           <th>Cargo</th>
           <th>Años</th>
+          <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -37,6 +39,16 @@ export const EmployeesList = ({ employees }) => {
             <td>{employeeItem.country}</td>
             <td>{employeeItem.position}</td>
             <td>{employeeItem.years}</td>
+            <td className='tdButton'>
+              <div>
+                <button className='butSave'>Editar</button>
+              </div>
+            </td>
+            <td className='tdButton'>
+              <div>
+                <button className='butDel'>Eliminar</button>
+              </div>
+            </td>
           </tr>
         ))}
       </tbody>
