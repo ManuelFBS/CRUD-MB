@@ -15,7 +15,7 @@ function App() {
   });
 
   const [employees, setEmployees] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getEmployees = async () => {
@@ -24,10 +24,10 @@ function App() {
         // Extraer datos de la respuesta de Axios
         const responseData = response.data && response.data.data;
         setEmployees(responseData || []);
-        setLoading(false);
+        // setLoading(false);
       } catch (error) {
         console.error('Error fetching data...!!!', error);
-        setLoading(false);
+        // setLoading(false);
       }
     };
     getEmployees();
@@ -42,11 +42,12 @@ function App() {
       <div id='main-container'>
         <h2 className='titList'>Lista de Empleados</h2>
         <div>
-          {loading ? (
+          {/* {loading ? (
             <p>Cargando empleados...</p>
           ) : (
             <EmployeesList employees={employees} />
-          )}
+          )} */}
+          <EmployeesList employees={employees} />
         </div>
       </div>
     </Fragment>
