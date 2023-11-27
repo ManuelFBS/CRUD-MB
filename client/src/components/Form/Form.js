@@ -43,18 +43,45 @@ export const Form = ({ employee, setEmployee }) => {
       body: JSON.stringify(employee)
     };
 
+    // fetch('http://localhost:8000/api/employees/create', requestInit)
+    //   .then((res) => res.json())
+    //   .then((res) => console.log(res));
+
     fetch('http://localhost:8000/api/employees/create', requestInit)
       .then((res) => res.json())
-      .then((res) => console.log(res));
-
-    // Reiniciando state del employee...
-    setEmployee({
-      name: '',
-      age: 0,
-      country: '',
-      position: '',
-      years: 0
-    });
+      .then((response) => {
+        if (response.success) {
+          swal.fire({
+            title: 'Registro exitoso...',
+            text: 'El empleado ha sido registrado correctamente.',
+            icon: 'success',
+            showConfirmButton: true,
+            confirmButtonText: 'Aceptar'
+          });
+          // Reiniciando state del employee...
+          setEmployee({
+            name: '',
+            age: 0,
+            country: '',
+            position: '',
+            years: 0
+          });
+        } else {
+          swal.fire({
+            title: 'Error...',
+            text:
+              response.message ||
+              'Ha ocurrido un error al intentar registrar el empleado.',
+            icon: 'error',
+            showConfirmButton: true,
+            confirmButtonText: 'Aceptar'
+          });
+        }
+      })
+      .catch((error) => {
+        console.error('Error al realizar la solicitud:', error);
+        // Manejar el error, si es necesario
+      });
   };
 
   const handleFormSubmit = (e) => {
