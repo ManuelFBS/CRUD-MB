@@ -6,7 +6,7 @@ import './App.css';
 import { EmployeesList } from './components/EmployeesList/EmployeesList.js';
 
 function App() {
-  const [formData, setFormData] = useState({
+  const [employee, setEmployee] = useState({
     name: '',
     age: 0,
     country: '',
@@ -37,7 +37,7 @@ function App() {
     <Fragment>
       <NavBar />
       <div>
-        <Form />
+        <Form employee={employee} setEmployee={setEmployee} />
       </div>
       <div id='main-container'>
         <h2 className='titList'>Lista de Empleados</h2>
