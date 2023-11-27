@@ -1,6 +1,7 @@
 // Form.js
 import React from 'react';
 import './Form.css';
+import swal from 'sweetalert2';
 
 export const Form = ({ employee, setEmployee }) => {
   const handleChange = (e) => {
@@ -22,9 +23,16 @@ export const Form = ({ employee, setEmployee }) => {
       age < 18 ||
       country === '' ||
       position === '' ||
-      years < 0
+      years < 1
     ) {
-      alert('Todos los campos son obligatorios...!!!');
+      // alert('Todos los campos son obligatorios...!!!');
+      swal.fire({
+        title: 'Advertencia...',
+        text: 'Todos los campos son obligatorios !!!',
+        icon: 'warning',
+        showConfirmButton: true,
+        confirmButtonText: 'Aceptar'
+      });
       return;
     }
 
@@ -49,9 +57,14 @@ export const Form = ({ employee, setEmployee }) => {
     });
   };
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    handleSubmit();
+  };
+
   return (
     <div>
-      <form className='formData'>
+      <form className='formData' onSubmit={handleFormSubmit}>
         <div className='data'>
           <div className='inputGroup'>
             <label htmlFor='name' className='formLabel'>
@@ -113,7 +126,11 @@ export const Form = ({ employee, setEmployee }) => {
               onChange={handleChange}
             />
           </div>
-          <button type='submit' className='buttonSave' onClick={handleSubmit}>
+          <button
+            type='button'
+            className='buttonSave'
+            onClick={handleFormSubmit}
+          >
             Guardar
           </button>
         </div>
