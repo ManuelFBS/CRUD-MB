@@ -1,7 +1,12 @@
 import React from 'react';
 import './EmployeesList.css';
 
-export const EmployeesList = ({ employees }) => {
+export const EmployeesList = ({
+  employee,
+  setEmployee,
+  employees,
+  setListEmployeesUpdated
+}) => {
   console.log('Employees', employees);
 
   if (!employees || employees.length === 0) {

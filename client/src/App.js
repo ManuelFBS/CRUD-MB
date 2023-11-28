@@ -16,6 +16,8 @@ function App() {
 
   const [employees, setEmployees] = useState([]);
 
+  const [listEmployeesUpdated, setListEmployeesUpdated] = useState(false);
+
   useEffect(() => {
     const getEmployees = async () => {
       try {
@@ -23,14 +25,13 @@ function App() {
         // Extraer datos de la respuesta de Axios
         const responseData = response.data && response.data.data;
         setEmployees(responseData || []);
-        // setLoading(false);
       } catch (error) {
         console.error('Error fetching data...!!!', error);
-        // setLoading(false);
       }
     };
     getEmployees();
-  }, []);
+    setListEmployeesUpdated(false);
+  }, [listEmployeesUpdated]);
 
   return (
     <Fragment>
