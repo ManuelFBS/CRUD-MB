@@ -16,6 +16,47 @@ export const EmployeesList = ({
     return <p>No hay empleados disponibles.</p>;
   }
 
+  const handleDelete = async (id) => {
+    try {
+      setLoading(true);
+
+      await Axios.delete(`http://localhost:8000/api/employees/del/${id}`);
+
+      setEmployee({
+        name: '',
+        age: '',
+        country: '',
+        position: '',
+        years: ''
+      });
+
+      // Otras acciones después de actualizar, como mostrar una alerta
+      // swal.fire('Éxito', 'Registro actualizado correctamente', 'success');
+      swal.fire({
+        title: 'Info...',
+        text: 'Registro eliminado correctamente...!!!',
+        icon: 'info',
+        showConfirmButton: true,
+        confirmButtonText: 'Aceptar'
+      });
+    } catch (error) {
+      console.error('Error al eliminar el registro:', error);
+      // Mostrar una alerta de error si es necesario
+      // swal.fire('Error', 'No se pudo eliminar el registro', 'error');
+      swal.fire({
+        title: 'error',
+        text: error.message,
+        icon: 'error',
+        showConfirmButton: true,
+        confirmButtonText: 'Aceptar'
+      });
+    } finally {
+      setLoading(false);
+    }
+
+    setListEmployeesUpdated(true);
+  };
+
   const handleUpdate = async (id) => {
     try {
       const updatedFields = Object.fromEntries(
@@ -100,7 +141,12 @@ export const EmployeesList = ({
             </td>
             <td className='tdButton'>
               <div>
-                <button className='butDel'>Eliminar</button>
+                <button
+                  className='butDel'
+                  onClick={() => handleDelete(employeeItem.id)}
+                >
+                  {loading ? 'Eliminando' : 'Eliminar'}
+                </button>
               </div>
             </td>
           </tr>
