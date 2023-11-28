@@ -3,7 +3,7 @@ import './Form.css';
 import Axios from 'axios';
 import swal from 'sweetalert2';
 
-export const Form = ({ employee, setEmployee }) => {
+export const Form = ({ employee, setEmployee, setListEmployeesUpdated }) => {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
 
@@ -80,6 +80,8 @@ export const Form = ({ employee, setEmployee }) => {
         showConfirmButton: true,
         confirmButtonText: 'Aceptar'
       });
+
+      setListEmployeesUpdated(true);
     } catch (error) {
       console.error('Error al guardar el registro:', error);
       // Mostrar una alerta de error si es necesario
