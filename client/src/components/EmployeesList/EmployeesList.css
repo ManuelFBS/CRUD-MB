@@ -63,7 +63,16 @@ tr:hover td {
   color: ghostwhite;
 }
 
+.butSave:active {
+  background-color: rgb(10, 93, 10);
+  /* color: rgb(179, 227, 211); */
+}
+
 .butDel:hover {
   background-color: rgb(201, 110, 110);
   color: ghostwhite;
+}
+
+.butDel:active {
+  background-color: rgb(123, 7, 7);
 }
