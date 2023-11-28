@@ -44,7 +44,7 @@ function App() {
         <div>
           <EmployeesList
             employee={employee}
-            setEmployee={setEmployees}
+            setEmployee={setEmployee}
             employees={employees}
             setListEmployeesUpdated={setListEmployeesUpdated}
           />
