@@ -36,7 +36,7 @@
   width: 45%;
   margin: auto;
   padding: 10px;
-  background-color: rgb(10, 5, 85);
+  background-color: rgb(29, 19, 174);
   border-radius: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
@@ -47,5 +47,13 @@
 }
 
 .buttonSave:hover {
-  background-color: #312c7f; /* color de fondo al pasar el ratón */
+  background-color: rgb(57, 45, 224); /* color de fondo al pasar el ratón */
+}
+
+.buttonSave:active {
+  background-color: rgb(
+    17,
+    11,
+    95
+  ); /* color de fondo al hacer click en el botón */
 }
