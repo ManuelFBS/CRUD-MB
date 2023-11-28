@@ -15,7 +15,6 @@ function App() {
   });
 
   const [employees, setEmployees] = useState([]);
-  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getEmployees = async () => {
