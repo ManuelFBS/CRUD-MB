@@ -37,7 +37,11 @@ function App() {
     <Fragment>
       <NavBar />
       <div>
-        <Form employee={employee} setEmployee={setEmployee} />
+        <Form
+          employee={employee}
+          setEmployee={setEmployee}
+          setListEmployeesUpdated={setListEmployeesUpdated}
+        />
       </div>
       <div id='main-container'>
         <h2 className='titList'>Lista de Empleados</h2>
