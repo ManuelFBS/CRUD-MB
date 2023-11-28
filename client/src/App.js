@@ -42,11 +42,6 @@ function App() {
       <div id='main-container'>
         <h2 className='titList'>Lista de Empleados</h2>
         <div>
-          {/* {loading ? (
-            <p>Cargando empleados...</p>
-          ) : (
-            <EmployeesList employees={employees} />
-          )} */}
           <EmployeesList employees={employees} />
         </div>
       </div>
