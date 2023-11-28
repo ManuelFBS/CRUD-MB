@@ -19,15 +19,26 @@ export const createEmployeeHandler = async (req, res) => {
     const employee = req.body;
     const result = await createEmployee(employee);
 
-    if (result.affectedRows > 0) {
+    // if (result.affectedRows > 0) {
+    //   res.status(201).json({
+    //     message: 'The employee has been successfully registered...!!!',
+    //     data: employee
+    //   });
+    // } else {
+    //   res.status(400).json({
+    //     message: 'Failed to register the employee.',
+    //     error: 'No rows affected in the database.'
+    //   });
+    // }
+    if (result.success) {
       res.status(201).json({
-        message: 'The employee has been successfully registered...!!!',
-        data: employee
+        message: result.message,
+        data: result.data
       });
     } else {
       res.status(400).json({
-        message: 'Failed to register the employee.',
-        error: 'No rows affected in the database.'
+        message: result.message,
+        error: result.error
       });
     }
 
