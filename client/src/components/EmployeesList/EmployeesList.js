@@ -22,17 +22,11 @@ export const EmployeesList = ({
         Object.entries(employee).filter(([key, value]) => value !== '')
       );
 
-      const requestInit = {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updatedFields)
-      };
-
       setLoading(true);
 
       await Axios.patch(
-        'http://localhost:8000/api/employees/update/' + id,
-        requestInit
+        `http://localhost:8000/api/employees/update/${id}`,
+        updatedFields
       );
 
       // Se limpia el Form después de hacer la petición...
@@ -98,7 +92,7 @@ export const EmployeesList = ({
               <div>
                 <button
                   className='butSave'
-                  onClick={() => handleUpdate(employee.id)}
+                  onClick={() => handleUpdate(employeeItem.id)}
                 >
                   {loading ? 'Editando' : 'Editar'}
                 </button>
