@@ -18,8 +18,20 @@ export const createEmployee = async (employee) => {
     ];
     const result = await executeQuery(query, values);
 
-    return result;
+    // return result;
+    return {
+      success: true,
+      message: 'El empleaddo ha sido registrado correctamente...!!!',
+      data: employee
+    };
   } catch (error) {
-    throw error;
+    // throw error;
+    console.error('Error al tratar de crear el empleado...!');
+
+    return {
+      success: false,
+      message: 'Ha ocurrido un error al tratar de crear el empleado...',
+      error: error.message
+    };
   }
 };
