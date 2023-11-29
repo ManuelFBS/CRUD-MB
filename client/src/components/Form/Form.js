@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Form.css';
 import Axios from 'axios';
-// import { validatedForm } from '../../utils/Validation.js';
+import { validatedForm } from '../../utils/Validation';
 import swal from 'sweetalert2';
 
 export const Form = ({ employee, setEmployee, setListEmployeesUpdated }) => {
@@ -15,38 +15,13 @@ export const Form = ({ employee, setEmployee, setListEmployeesUpdated }) => {
     });
   };
 
-  const validatedForm = () => {
-    const newErrors = {};
-
-    // Validar que todos los campos obligatorios estén llenos...
-    if (!employee.name.trim()) {
-      newErrors.name = 'El nombre es obligatorio';
-    }
-
-    if (employee.age < 18) {
-      newErrors.age = 18;
-    }
-
-    if (!employee.country.trim()) {
-      newErrors.country = 'El país es obligatorio';
-    }
-
-    if (!employee.position.trim()) {
-      newErrors.position = 'El cargo es obligatorio';
-    }
-
-    if (employee.years < 1) {
-      newErrors.years = 1;
-    }
-
-    setErrors(newErrors);
-
-    return Object.keys(newErrors).length === 0;
-  };
-
   const handleSave = async () => {
     try {
-      if (!validatedForm()) {
+      const newErrors = validatedForm(employee);
+
+      if (Object.keys(newErrors).length > 0) {
+        setErrors(newErrors);
+
         swal.fire({
           title: 'Advertencia',
           text: 'Todos los campos son obligatorios...!',
