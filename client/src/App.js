@@ -1,7 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import Axios from 'axios';
 import { NavBar } from './components/NavBar/NavBar.js';
-import { Form } from './components/Form/Form.js';
+// import { Form } from './components/Form/Form.js';
+import { FormLogic } from './components/Form/FormLogic.js';
 import './App.css';
 import { EmployeesList } from './components/EmployeesList/EmployeesList.js';
 
@@ -37,8 +38,12 @@ function App() {
     <Fragment>
       <NavBar />
       <div>
-        <Form
+        {/* <Form
           employee={employee}
+          setEmployee={setEmployee}
+          setListEmployeesUpdated={setListEmployeesUpdated}
+        /> */}
+        <FormLogic
           setEmployee={setEmployee}
           setListEmployeesUpdated={setListEmployeesUpdated}
         />
