@@ -1,15 +1,42 @@
-/* #main-container {
-  margin: 50px auto;
-  width: 1100px;
+body {
+  background-color: #d2d4e9;
+  margin: 0;
+  padding: 0;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav-container {
+  background-color: rgb(10, 5, 85);
+  height: 50px;
+  width: 100%;
+}
+
+#form-container {
+  background-color: #c4c5d0;
+  width: 350px;
+  height: 200px;
+  border: 3px solid rgb(153, 151, 151);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#list-container {
+  background-color: aqua;
+  width: 1400px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 3px solid rgb(153, 151, 151);
+  border-radius: 10px;
 }
 
 .titList {
   font-family: 'Roboto';
   font-size: 26px;
-} */
-
-body {
-  background-color: #6270ed;
-  margin: 0;
-  padding: 0;
+  text-align: center;
 }
