@@ -19,10 +19,10 @@ export const FormLogic = ({
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
-    setEmployee({
-      ...employee,
+    setEmployee((prevEmployee) => ({
+      ...prevEmployee,
       [e.target.name]: e.target.value
-    });
+    }));
   };
 
   const handleSave = async () => {
@@ -57,6 +57,15 @@ export const FormLogic = ({
         showConfirmButton: true,
         confirmButtonText: 'Aceptar'
       });
+
+      setEmployee((prevEmployee) => ({
+        ...prevEmployee,
+        name: '',
+        age: 0,
+        country: '',
+        position: '',
+        years: 0
+      }));
 
       setListEmployeesUpdated(true);
     } catch (error) {
