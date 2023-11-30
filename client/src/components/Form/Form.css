@@ -1,5 +1,8 @@
 .formData {
-  width: 330px;
+  /* width: 330px;
+  margin: 20px auto; */
+  width: 90%;
+  max-width: 400px;
   margin: 20px auto;
 }
 
@@ -56,4 +59,11 @@
     11,
     95
   ); /* color de fondo al hacer click en el botón */
+}
+
+@media screen and(max-width:60px) {
+  .formData {
+    width: 100%;
+    max-width: none;
+  }
 }

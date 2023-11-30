@@ -1,3 +1,7 @@
+.table-Container {
+  overflow-x: auto;
+}
+
 table {
   background-color: ghostwhite;
   text-align: left;
@@ -65,7 +69,6 @@ tr:hover td {
 
 .butSave:active {
   background-color: rgb(10, 93, 10);
-  /* color: rgb(179, 227, 211); */
 }
 
 .butDel:hover {
@@ -76,3 +79,52 @@ tr:hover td {
 .butDel:active {
   background-color: rgb(123, 7, 7);
 }
+
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/*  */
+/*  */
+/*  */
+
+/* 
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  background-color: ghostwhite;
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Limitar el ancho máximo de cada celda en pantallas más pequeñas */
+/* @media screen and (max-width: 600px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+} */
