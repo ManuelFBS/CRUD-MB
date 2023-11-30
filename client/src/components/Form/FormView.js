@@ -1,12 +1,7 @@
 import React from 'react';
 import './Form.css';
 
-export const FormPresentation = ({
-  employee,
-  handleChange,
-  handleSave,
-  loading
-}) => {
+export const FormView = ({ employee, handleChange, handleSave, loading }) => {
   return (
     <div>
       <form className='formData'>

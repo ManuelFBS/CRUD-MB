@@ -1,28 +1,19 @@
 import React, { useState } from 'react';
+// import './Form.css';
 import Axios from 'axios';
 import { validatedForm } from '../../utils/Validation';
-import { FormPresentation } from './FormPresentation.js';
 import swal from 'sweetalert2';
+import { FormView } from './FormView';
 
-export const FormLogic = ({
-  setEmployee: setEmployeeFromProps,
-  setListEmployeesUpdated
-}) => {
+export const Form = ({ employee, setEmployee, setListEmployeesUpdated }) => {
   const [loading, setLoading] = useState(false);
-  const [employee, setEmployee] = useState({
-    name: '',
-    age: '',
-    country: '',
-    position: '',
-    years: ''
-  });
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
-    setEmployee((prevEmployee) => ({
-      ...prevEmployee,
+    setEmployee({
+      ...employee,
       [e.target.name]: e.target.value
-    }));
+    });
   };
 
   const handleSave = async () => {
@@ -48,6 +39,15 @@ export const FormLogic = ({
       // Realizar la petición POST...
       await Axios.post('http://localhost:8000/api/employees/create', employee);
 
+      // Se limpia el Form después de hacer la petición...
+      setEmployee({
+        name: '',
+        age: '',
+        country: '',
+        position: '',
+        years: ''
+      });
+
       // Otras acciones después de guardar, como mostrar una alerta
       // swal.fire('Éxito', 'Registro guardado correctamente', 'success');
       swal.fire({
@@ -57,15 +57,6 @@ export const FormLogic = ({
         showConfirmButton: true,
         confirmButtonText: 'Aceptar'
       });
-
-      setEmployee((prevEmployee) => ({
-        ...prevEmployee,
-        name: '',
-        age: 0,
-        country: '',
-        position: '',
-        years: 0
-      }));
 
       setListEmployeesUpdated(true);
     } catch (error) {
@@ -83,8 +74,9 @@ export const FormLogic = ({
       setLoading(false);
     }
   };
+
   return (
-    <FormPresentation
+    <FormView
       employee={employee}
       handleChange={handleChange}
       handleSave={handleSave}
