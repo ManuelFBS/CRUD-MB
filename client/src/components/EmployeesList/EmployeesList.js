@@ -9,7 +9,6 @@ export const EmployeesList = ({
   employees,
   setListEmployeesUpdated
 }) => {
-  // console.log('Employees', employees);
   const [loading, setLoading] = useState(false);
 
   if (!employees || employees.length === 0) {
@@ -73,10 +72,10 @@ export const EmployeesList = ({
       // Se limpia el Form después de hacer la petición...
       setEmployee({
         name: '',
-        age: '',
+        age: 0,
         country: '',
         position: '',
-        years: ''
+        years: 0
       });
 
       // Otras acciones después de actualizar, como mostrar una alerta
