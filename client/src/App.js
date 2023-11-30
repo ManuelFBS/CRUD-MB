@@ -1,10 +1,9 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import Axios from 'axios';
 import { NavBar } from './components/NavBar/NavBar.js';
-// import { Form } from './components/Form/Form.js';
 import { Form } from './components/Form/FormInit.js';
 import './App.css';
-import { EmployeesList } from './components/EmployeesList/EmployeesList.js';
+import { EmployeesList } from './components/EmployeesList/EmployeesListInit.js';
 
 function App() {
   const [employee, setEmployee] = useState({
