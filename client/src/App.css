@@ -1,4 +1,4 @@
-#main-container {
+/* #main-container {
   margin: 50px auto;
   width: 1100px;
 }
@@ -6,4 +6,10 @@
 .titList {
   font-family: 'Roboto';
   font-size: 26px;
+} */
+
+body {
+  background-color: #6270ed;
+  margin: 0;
+  padding: 0;
 }
