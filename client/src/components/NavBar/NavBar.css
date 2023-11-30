@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: #6270ed;
   margin: 0;
   padding: 0;
@@ -27,4 +27,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+} */
+
+.navbarDiv {
+  /* background-color: aquamarine; */
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.navbarTit {
+  font-family: monospace;
+  font-size: 35px;
+  font-weight: 600;
+  font-style: italic;
+  color: ghostwhite;
 }

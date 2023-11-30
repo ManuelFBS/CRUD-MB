@@ -1,11 +1,11 @@
 import React from 'react';
-// import './NavBar.css';
+import './NavBar.css';
 
 export const NavBar = () => {
   return (
-    <div>
+    <div className='navbarDiv'>
       <nav className='container'>
-        <div className='navbarDiv'>Employees App</div>
+        <div className='navbarTit'>MTM Software Co ── Employees</div>
       </nav>
     </div>
   );
