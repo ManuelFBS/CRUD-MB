@@ -1,20 +1,21 @@
 .formData {
-  /* width: 330px;
-  margin: 20px auto; */
-  width: 90%;
-  max-width: 400px;
-  margin: 20px auto;
+  width: 100%;
+  width: 450px;
+  margin: 20px 0 10px 0;
 }
 
 .data {
   display: flex;
   flex-direction: column;
+  /* background-color: aqua; */
 }
 
 .inputGroup {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 12px;
+  margin-right: 10px;
+  margin-bottom: 16px;
 }
 
 .formLabel {
@@ -39,26 +40,24 @@
   width: 45%;
   margin: auto;
   padding: 10px;
-  background-color: rgb(29, 19, 174);
+  background-color: rgb(29, 19, 240);
   border-radius: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
   font-weight: 400;
-  color: ghostwhite;
+  color: rgb(210, 210, 240);
   border: none;
   cursor: pointer;
 }
 
 .buttonSave:hover {
-  background-color: rgb(57, 45, 224); /* color de fondo al pasar el ratón */
+  background-color: rgb(91, 83, 243);
+  color: ghostwhite;
 }
 
 .buttonSave:active {
-  background-color: rgb(
-    17,
-    11,
-    95
-  ); /* color de fondo al hacer click en el botón */
+  background-color: rgb(20, 15, 210);
+  color: rgb(154, 154, 197);
 }
 
 @media screen and(max-width:60px) {

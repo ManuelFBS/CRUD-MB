@@ -1,5 +1,5 @@
 import React from 'react';
-// import './Form.css';
+import './Form.css';
 
 export const FormView = ({ employee, handleChange, handleSave, loading }) => {
   return (
