@@ -34,8 +34,8 @@ tr:nth-child(even) {
 }
 
 tr:hover td {
-  background-color: #4ca1b8;
-  color: white;
+  background-color: #89c9db;
+  color: blue;
 }
 
 .tdButton {

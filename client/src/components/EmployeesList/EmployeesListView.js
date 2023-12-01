@@ -1,5 +1,5 @@
 import React from 'react';
-// import './EmployeesList.css';
+import './EmployeesList.css';
 
 export const EmployeesListView = ({
   employees,
