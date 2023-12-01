@@ -15,6 +15,27 @@ export const EmployeesList = ({
     return <p>No hay empleados disponibles.</p>;
   }
 
+  // "confirmDelete" se encarga de advertir al usuario sobre la acción de eliminación
+  // de un registro seleccionado, a llevarse cabo...
+  const confirmDelete = (id) => {
+    swal
+      .fire({
+        title: `Eliminar empleado ID: ${id}`,
+        text: 'Desea eliminar a este empleado',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar'
+      })
+      .then((result) => {
+        if (result.value) {
+          handleDelete(id);
+        } else {
+          return;
+        }
+      });
+  };
+
   const handleDelete = async (id) => {
     try {
       setLoading(true);
@@ -108,7 +129,7 @@ export const EmployeesList = ({
   return (
     <EmployeesListView
       employees={employees}
-      handleDelete={handleDelete}
+      handleDelete={confirmDelete}
       handleUpdate={handleUpdate}
       loading={loading}
     />
